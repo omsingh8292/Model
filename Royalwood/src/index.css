@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+@theme {
+  /* Colors - Exactly from Anish's screen */
+  --color-forest: #1b4332;
+  --color-emerald: #2d6a4f;
+  --color-sage: #95d5b2;
+  --color-nature-deep: #081c15;
+  --color-nature-leaf: #2d6a4f;
+  --color-nature-moss: #40916c;
+  --color-nature-soft: #b7e4c7;
+  --color-nature-bg: #f0f7f1;
+  --color-nature-section: #d8e8dc;
+  --color-sky: #90e0ef;
+  --color-sunrise: #f4a261;
+  --color-sunset: #ffd6a5;
+  --color-cream: #faf3e0;
+  --color-golden: #ffd700;
+
+  /* Typography - Matching the professional look */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  /* CSS Variables for standard usage */
+  --forest: #1b4332;
+  --emerald: #2d6a4f;
+  --sage: #95d5b2;
+  --nature-deep: #081c15;
+  --nature-bg: #f0f7f1;
+}
+
+body {
+  background-color: var(--nature-bg);
+  color: var(--nature-deep);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* If you still want your specific background image on the Home page only */
+.home-hero {
+  background: url('/src/assets/forest-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
