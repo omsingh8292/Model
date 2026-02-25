@@ -39,10 +39,19 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 /* If you still want your specific background image on the Home page only */
 .home-hero {
   background: url('/src/assets/forest-bg.jpg') no-repeat center center fixed;
   background-size: cover;
+}
+
+.footer-bg {
+  background: url("/forest-footer.jpg") center/cover no-repeat;
+}
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
 }

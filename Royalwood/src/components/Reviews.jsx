@@ -3,70 +3,61 @@ import { FaQuoteLeft, FaStar } from "react-icons/fa";
 
 const reviews = [
   {
-    name: "Arjun Mehta",
-    text: "An absolute slice of heaven. The forest views from the Premium Room are breathtaking. Truly a royal experience.",
+    name: "Amit Sharma",
+    text: "We stayed here for 2 nights and it was amazing. The rooms were clean, staff was polite, and the forest view was beautiful. Worth the price.",
     rating: 5,
   },
   {
-    name: "Sneha Kapoor",
-    text: "The perfect escape from the city. The service is impeccable, and the local cuisine is a must-try!",
-    rating: 5,
+    name: "Priya Singh",
+    text: "Very peaceful place. Perfect for family trips. Food was good and the ambience was relaxing. Will definitely visit again.",
+    rating: 4,
   },
   {
-    name: "Rohan Das",
-    text: "Waking up to the sound of birds and the mist over the hills was magical. Highly recommend the nature walks.",
+    name: "Rahul Verma",
+    text: "Loved the nature vibe and cottages. Great place to relax away from city noise. Staff was helpful and friendly.",
     rating: 5,
   },
 ];
 
 const Reviews = () => {
   return (
-    <section className="py-24 bg-nature-bg border-t border-nature-moss/10">
-      <div className="container mx-auto px-6">
-        
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-nature-moss font-bold tracking-[0.3em] uppercase text-xs mb-3 block">
-            Guest Experiences
-          </span>
-          <h2 className="text-4xl md:text-5xl font-serif text-nature-deep mb-4">
-            Voices of <span className="italic">Nature</span>
+    <section className="py-20 bg-[#cfd5cf]">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-serif font-bold text-[#1f3d2b]">
+            Guest Reviews
           </h2>
-          <div className="w-20 h-1 bg-nature-moss mx-auto rounded-full"></div>
+          <p className="text-[#2f5d44] mt-2">What our guests say about Royal Woods</p>
         </div>
 
-        {/* Reviews Grid */}
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((rev, i) => (
-            <div 
-              key={i} 
-              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-nature-moss/5 flex flex-col items-center text-center"
-            >
-              {/* Star Rating */}
-              <div className="flex space-x-1 mb-6 text-golden">
+            <div key={i} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+
+              {/* Stars */}
+              <div className="flex mb-3 text-yellow-500">
                 {[...Array(rev.rating)].map((_, i) => (
                   <FaStar key={i} size={14} />
                 ))}
               </div>
 
-              {/* Quote Icon */}
-              <FaQuoteLeft className="text-nature-soft mb-4" size={24} />
+              {/* Quote */}
+              <FaQuoteLeft className="text-gray-300 mb-2" size={20} />
 
-              {/* Review Text - Serif for a literary/premium feel */}
-              <p className="font-serif italic text-lg text-nature-deep/80 leading-relaxed mb-8">
-                "{rev.text}"
+              <p className="text-gray-700 text-sm leading-relaxed mb-5">
+                {rev.text}
               </p>
 
-              {/* Name - Clean Sans font */}
-              <div className="mt-auto">
-                <p className="font-sans font-bold uppercase tracking-widest text-sm text-nature-deep">
-                  {rev.name}
-                </p>
-                <p className="text-nature-moss text-xs mt-1">Verified Guest</p>
-              </div>
+              <p className="font-bold text-[#1f3d2b] text-sm">{rev.name}</p>
+              <p className="text-gray-400 text-xs">Verified Guest</p>
+
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
 import Gallery from "../components/Gallery.jsx";
 import AboutCards from "../components/AboutCards.jsx";
-import Rooms from "../components/Rooms.jsx";
+import Room from "../components/Room";
 import Footer from "../components/Footer.jsx";
-import Reviews from "../components/Reviews.jsx"
+import Reviews from "../components/Reviews.jsx";
 
 const Home = () => {
   return (
@@ -13,11 +13,10 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Gallery />
-      <Rooms />
+      <Room />
       <AboutCards />
-      <Reviews/>
+      <Reviews />
       <Footer />
-      
     </div>
   );
 };

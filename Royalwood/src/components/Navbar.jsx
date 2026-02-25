@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -8,8 +9,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      
-      // visible if scrolling up OR at the very top
       setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     };
@@ -19,62 +18,67 @@ const Navbar = () => {
   }, [prevScrollPos]);
 
   return (
-    <nav 
+    <nav
       className={`fixed w-full z-50 transition-transform duration-500 bg-nature-bg/80 backdrop-blur-md border-b border-nature-moss/10 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        
-        {/* Logo - Matches your premium Serif style */}
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-nature-deep tracking-tight">
+
+        {/* LOGO */}
+        <h1 className="text-3xl font-serif font-bold text-nature-deep">
           Royal <span className="italic text-nature-moss">Woods</span>
         </h1>
 
-        {/* Desktop Links */}
+        {/* DESKTOP MENU */}
         <div className="hidden md:flex space-x-8 items-center">
-          {["Home", "Gallery", "Rooms", "About", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-nature-deep font-sans text-sm font-bold uppercase tracking-[0.2em] hover:text-nature-moss transition-colors"
-            >
-              {item}
-            </a>
-          ))}
-          <a 
-            href="#rooms" 
-            className="bg-forest text-white px-6 py-2 rounded-full font-sans text-xs font-bold uppercase tracking-widest hover:bg-nature-deep transition-all shadow-md"
+          <a href="#home" className="nav-link">Home</a>
+          <Link to="/services" className="nav-link">Services</Link>
+          <Link to="/about" className="nav-link">About</Link>
+
+          {/* Login Button */}
+          <Link
+            to="/login"
+            className="bg-forest text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-nature-deep transition"
           >
-            LOG IN
-          </a>
+            Login
+          </Link>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* MOBILE BUTTON */}
         <div className="md:hidden">
-          <button onClick={() => setOpen(!open)} className="text-nature-deep p-2">
-            <span className="text-3xl">{open ? "✕" : "☰"}</span>
+          <button onClick={() => setOpen(!open)} className="text-nature-deep text-3xl">
+            {open ? "✕" : "☰"}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div 
-        className={`md:hidden bg-nature-bg border-b border-nature-moss/10 overflow-hidden transition-all duration-300 ${
+      {/* MOBILE MENU */}
+      <div
+        className={`md:hidden bg-nature-bg border-b border-nature-moss/10 transition-all duration-300 ${
           open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col space-y-4 px-6 py-6">
-          {["Home", "Gallery", "Rooms", "About", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={() => setOpen(false)}
-              className="text-nature-deep font-sans text-lg font-bold uppercase tracking-widest"
-            >
-              {item}
-            </a>
-          ))}
+          <a href="#home" onClick={() => setOpen(false)} className="nav-link-mobile">
+            Home
+          </a>
+
+          <Link to="/services" onClick={() => setOpen(false)} className="nav-link-mobile">
+            Services
+          </Link>
+
+          <Link to="/about" onClick={() => setOpen(false)} className="nav-link-mobile">
+            About
+          </Link>
+
+          <Link
+            to="/login"
+            onClick={() => setOpen(false)}
+            className="bg-forest text-white px-6 py-2 rounded-full text-center font-bold"
+          >
+            Login
+          </Link>
         </div>
       </div>
     </nav>
