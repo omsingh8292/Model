@@ -1,7 +1,7 @@
 import React from "react";
-import luxuryImg from "../assets/luxuryImg.jpg";
-import adventureImg from "../assets/adventureImg.jpg";
-import spaImg from "../assets/spaImg.jpg";
+import luxuryImg from "../assets/Services/luxuryImg.jpg";
+import adventureImg from "../assets/Services/adventureImg.jpg";
+import spaImg from "../assets/Services/spaImg.jpg";
 import { FaBed, FaMountain, FaSpa } from "react-icons/fa";
 
 const servicesData = [

@@ -1,5 +1,5 @@
 import React from "react";
-import heroImg from "../assets/hero.jpg";
+import heroImg from "../../assets/Home/hero.jpg";
 import { FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 
 const Hero = () => {

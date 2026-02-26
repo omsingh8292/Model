@@ -1,8 +1,8 @@
 import React from "react";
-import gallery1 from "../assets/gallery1.jpg";
-import gallery2 from "../assets/gallery2.jpg";
-import gallery3 from "../assets/gallery3.jpg";
-import gallery4 from "../assets/gallery4.jpg";
+import gallery1 from "../../assets/Home/gallery1.jpg";
+import gallery2 from "../../assets/Home/gallery2.jpg";
+import gallery3 from "../../assets/Home/gallery3.jpg";
+import gallery4 from "../../assets/Home/gallery4.jpg";
 
 const gallery = [
   {

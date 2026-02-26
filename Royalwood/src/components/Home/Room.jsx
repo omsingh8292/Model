@@ -1,8 +1,8 @@
 import React from "react";
-import room1 from "../assets/room1.jpg";
-import room2 from "../assets/room2.jpg";
-import room3 from "../assets/room3.jpg";
-import room4 from "../assets/room4.jpg";
+import room1 from "../../assets/Home/room1.jpg";
+import room2 from "../../assets/Home/room2.jpg";
+import room3 from "../../assets/Home/room3.jpg";
+import room4 from "../../assets/Home/room4.jpg";
 
 const rooms = [
   { img: room1, title: "Deluxe Room", price: "₹2,500 / night" },
