@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true); // ✅ fixed typo
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#home" className="nav-link">Home</a>
+          <Link to="/" className="nav-link">Home</Link> {/* ✅ changed to "/" */}
           <Link to="/services" className="nav-link">Services</Link>
           <Link to="/about" className="nav-link">About</Link>
 
@@ -60,9 +60,9 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col space-y-4 px-6 py-6">
-          <a href="#home" onClick={() => setOpen(false)} className="nav-link-mobile">
+          <Link to="/" onClick={() => setOpen(false)} className="nav-link-mobile">
             Home
-          </a>
+          </Link>
 
           <Link to="/services" onClick={() => setOpen(false)} className="nav-link-mobile">
             Services

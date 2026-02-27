@@ -2,6 +2,8 @@ import React from "react";
 import heroImg from "../../assets/Home/hero.jpg";
 import { FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 
+
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden pt-28 lg:pt-20">
