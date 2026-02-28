@@ -1,0 +1,22 @@
+export const roomsData = [
+  { id: 1, title: "Royal King Suite", price: "$450/night", image: "https://images.unsplash.com/photo-1618773928121-c37242e0101b?auto=format&fit=crop&w=800&q=60" },
+  { id: 2, title: "Presidential Penthouse", price: "$900/night", image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=60" },
+  { id: 3, title: "Garden View Deluxe", price: "$280/night", image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=60" },
+  { id: 4, title: "Infinity Pool Villa", price: "$650/night", image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=60" },
+  { id: 5, title: "Grand Ballroom Suite", price: "$550/night", image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=60" },
+  { id: 6, title: "Classic Heritage Room", price: "$220/night", image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=60" },
+  { id: 7, title: "Executive Corner Room", price: "$320/night", image: "https://images.unsplash.com/photo-1611892440504-42a792e245a4?auto=format&fit=crop&w=800&q=60" },
+  { id: 8, title: "Sunset Horizon Suite", price: "$410/night", image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=60" },
+  { id: 9, title: "Royal Gold Chamber", price: "$700/night", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=60" },
+  { id: 10, title: "Urban Oasis Loft", price: "$350/night", image: "https://images.unsplash.com/photo-1512918728615-ed452b3149d2?auto=format&fit=crop&w=800&q=60" },
+  { id: 11, title: "Silk Road Master", price: "$480/night", image: "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?auto=format&fit=crop&w=800&q=60" },
+  { id: 12, title: "Midnight Velvet Suite", price: "$520/night", image: "https://images.unsplash.com/photo-1574643156829-57778601da86?auto=format&fit=crop&w=800&q=60" },
+  { id: 13, title: "Crystal Balcony Room", price: "$390/night", image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60" },
+  { id: 14, title: "Empire State Suite", price: "$850/night", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=60" },
+  { id: 15, title: "Majestic Terrace", price: "$440/night", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" },
+  { id: 16, title: "Serenity Spa Suite", price: "$500/night", image: "https://images.unsplash.com/photo-1540518614846-7ede433c44ad?auto=format&fit=crop&w=800&q=60" },
+  { id: 17, title: "Platinum View Room", price: "$375/night", image: "https://images.unsplash.com/photo-1582719478250-de89ca24508e?auto=format&fit=crop&w=800&q=60" },
+  { id: 18, title: "Regal Manor Suite", price: "$600/night", image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=800&q=60" },
+  { id: 19, title: "Sapphire Bay Suite", price: "$420/night", image: "https://images.unsplash.com/photo-1595126731403-1c3954625b1b?auto=format&fit=crop&w=800&q=60" },
+  { id: 20, title: "Imperial Garden Villa", price: "$950/night", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60" }
+];

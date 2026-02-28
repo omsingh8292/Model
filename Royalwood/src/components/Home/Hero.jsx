@@ -1,10 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
 import heroImg from "../../assets/Home/hero.jpg";
 import { FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 
-
-
 const Hero = () => {
+  const navigate = useNavigate(); // 2. Initialize navigate
+
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden pt-28 lg:pt-20">
 
@@ -50,13 +51,19 @@ const Hero = () => {
 
         {/* BUTTONS */}
         <div className="mt-10 flex gap-4 flex-wrap">
-          <a className="bg-green-600 hover:bg-green-800 px-8 py-4 rounded-full text-lg font-semibold transition">
+          {/* 3. Changed <a> to <button> and added onClick */}
+          <button 
+            onClick={() => navigate('/rooms')} 
+            className="bg-green-600 hover:bg-green-800 px-8 py-4 rounded-full text-lg font-semibold transition cursor-pointer"
+          >
             Book Your Stay
-          </a>
+          </button>
 
-          <a className="border border-green-400 hover:bg-green-400 hover:text-black px-8 py-4 rounded-full text-lg font-semibold transition">
+          <button 
+            className="border border-green-400 hover:bg-green-400 hover:text-black px-8 py-4 rounded-full text-lg font-semibold transition cursor-pointer"
+          >
             Explore More
-          </a>
+          </button>
         </div>
 
       </div>

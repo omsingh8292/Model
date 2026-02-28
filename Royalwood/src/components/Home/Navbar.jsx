@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [visible, setVisible] = useState(true); // ✅ fixed typo
+  const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
@@ -19,35 +19,42 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-transform duration-500 bg-nature-bg/80 backdrop-blur-md border-b border-nature-moss/10 ${
+      className={`fixed top-0 w-full z-50 transition-transform duration-500 ${
         visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      } bg-white/80 backdrop-blur-xl border-b border-gray-200`}
     >
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* LOGO */}
-        <h1 className="text-3xl font-serif font-bold text-nature-deep">
-          Royal <span className="italic text-nature-moss">Woods</span>
-        </h1>
+        <div className="flex-1">
+          <h1 className="text-3xl font-serif font-bold text-gray-900">
+            Royal <span className="italic text-[#b68c2a]">Woods</span>
+          </h1>
+        </div>
 
-        {/* DESKTOP MENU */}
-        <div className="hidden md:flex space-x-8 items-center">
-          <Link to="/" className="nav-link">Home</Link> {/* ✅ changed to "/" */}
-          <Link to="/services" className="nav-link">Services</Link>
-          <Link to="/about" className="nav-link">About</Link>
+        {/* CENTER MENU (Desktop) */}
+        <div className="hidden md:flex flex-1 justify-center space-x-10">
+          <Link to="/" className="nav-item">Home</Link>
+          <Link to="/services" className="nav-item">Services</Link>
+          <Link to="/about" className="nav-item">About</Link>
+        </div>
 
-          {/* Login Button */}
+        {/* RIGHT BUTTON */}
+        <div className="hidden md:flex flex-1 justify-end">
           <Link
             to="/login"
-            className="bg-forest text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-nature-deep transition"
+            className="px-6 py-2 rounded-full bg-[#b68c2a] text-white font-semibold hover:bg-black transition duration-300"
           >
             Login
           </Link>
         </div>
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE MENU BUTTON */}
         <div className="md:hidden">
-          <button onClick={() => setOpen(!open)} className="text-nature-deep text-3xl">
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-3xl text-gray-800"
+          >
             {open ? "✕" : "☰"}
           </button>
         </div>
@@ -55,27 +62,24 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-nature-bg border-b border-nature-moss/10 transition-all duration-300 ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden bg-white transition-all duration-300 ${
+          open ? "max-h-96 py-6" : "max-h-0 overflow-hidden"
         }`}
       >
-        <div className="flex flex-col space-y-4 px-6 py-6">
-          <Link to="/" onClick={() => setOpen(false)} className="nav-link-mobile">
+        <div className="flex flex-col items-center space-y-6">
+          <Link to="/" onClick={() => setOpen(false)} className="mobile-item">
             Home
           </Link>
-
-          <Link to="/services" onClick={() => setOpen(false)} className="nav-link-mobile">
+          <Link to="/services" onClick={() => setOpen(false)} className="mobile-item">
             Services
           </Link>
-
-          <Link to="/about" onClick={() => setOpen(false)} className="nav-link-mobile">
+          <Link to="/about" onClick={() => setOpen(false)} className="mobile-item">
             About
           </Link>
-
           <Link
             to="/login"
             onClick={() => setOpen(false)}
-            className="bg-forest text-white px-6 py-2 rounded-full text-center font-bold"
+            className="px-6 py-2 rounded-full bg-[#b68c2a] text-white font-semibold"
           >
             Login
           </Link>

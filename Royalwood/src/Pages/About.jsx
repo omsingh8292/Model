@@ -1,16 +1,26 @@
 import React from "react";
-import Navbar from "../components/Home/Navbar.jsx";
-import Footer from "../components/Home/Footer.jsx";
+import Navbar from "../components/Home/Navbar";
+import AboutHero from "../components/About/AboutHero";
+import StorySection from "../components/About/StorySection";
+import ValuesSection from "../components/About/ValuesSection";
+import ArchitectureSection from "../components/About/ArchitectureSection";
+import StatsSection from "../components/About/StatsSection";
+import MissionVision from "../components/About/MissionVision";
+import Footer from "../components/Home/Footer";
 
 const About = () => {
   return (
-    <div className="font-sans flex flex-col min-h-screen">
+    <div className="bg-[#0f2e1c] text-white">
       <Navbar />
-      <div className="flex-grow text-center py-40">
-        <h1 className="text-5xl font-bold">About Us</h1>
-        <p className="mt-6 text-xl">Welcome to Royal Woods Resort!</p>
-      </div>
-      <Footer />
+      <AboutHero />
+      <StorySection />
+      <ValuesSection />
+      <ArchitectureSection />
+
+      <StatsSection />
+      <MissionVision />
+<Footer/>
+     
     </div>
   );
 };
