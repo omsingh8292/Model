@@ -48,6 +48,17 @@ export const roomsData = [
       "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&auto=format&fit=crop&q=60",
   },
   {
+id:1,
+title:"Royal King Suite",
+price:"$450/night",
+image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+gallery:[
+"https://images.unsplash.com/photo-1560185127-6ed189bf02f4",
+"https://images.unsplash.com/photo-1590490360182-c33d57733427",
+"https://images.unsplash.com/photo-1618773928121-c32242e63f39"
+]
+},
+  {
     id: 8,
     title: "Sunset Horizon Suite",
     price: "$410/night",

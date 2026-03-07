@@ -36,11 +36,12 @@ const RoomCards = ({ data }) => {
           <p className="text-gray-500 text-sm mb-4">
             Luxury comfort with modern royal design and premium amenities.
           </p>
-
+<Link to={`/room/${data.id}`}>
           <button className="w-full bg-black text-white py-2 rounded-lg 
                              hover:bg-gray-800 transition duration-300">
             Book Now
           </button>
+          </Link>
         </div>
 
       </div>
