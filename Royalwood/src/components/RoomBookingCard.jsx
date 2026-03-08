@@ -89,6 +89,7 @@ Reserve Room
 
 </div>
 // all things are in the card, so we close the card div here
+// all things are in the card, so we close the card div here
 </div>
 
 )
