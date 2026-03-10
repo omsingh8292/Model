@@ -91,6 +91,16 @@ Reserve Room
 // all things are in the card, so we close the card div here
 // all things are in the card, so we close the card div here
 //lolo the dat are o good that all capture through the mainImage
+// all things are in the card, so we close the card div here
+// all things are in the card, so we close the card div here
+//lolo the dat are o good that all capture through the mainImage
+// all things are in the card, so we close the card div here
+// all things are in the card, so we close the card div here
+//lolo the dat are o good that all capture through the mainImage
+// all things are in the card, so we close the card div here
+// all things are in the card, so we close the card div here
+//lolo the dat are o good that all capture through the mainImage
+
 </div>
 
 )
