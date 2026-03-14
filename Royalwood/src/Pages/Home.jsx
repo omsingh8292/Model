@@ -17,6 +17,7 @@ const Home = () => {
       <AboutCards />
       <Reviews />
       <Footer />
+      // all the things are captured by the state of harmos
     </div>
   );
 };
